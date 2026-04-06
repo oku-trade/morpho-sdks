@@ -26,22 +26,16 @@
     "coverage:report": "genhtml --hierarchical --sort --prefix \"$(pwd)\" -o coverage/lcov coverage/lcov.info"
   },
   "devDependencies": {
-    "@actions/core": "^1.11.1",
     "@biomejs/biome": "^1.9.4",
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",
-    "@conventional-changelog/git-client": "^2.0.0",
     "@types/node": "^24.10.2",
     "@vitest/coverage-v8": "^4.0.15",
     "@vitest/ui": "^4.0.15",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
-    "conventional-changelog-writer": "^8.0.1",
-    "conventional-recommended-bump": "^11.0.0",
     "dotenv-cli": "^8.0.0",
     "happy-dom": "^20.0.11",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "semver": "^7.7.1",
     "typescript": "^5.9.3",
     "undici": ">=5.29.0",
     "viem": "^2.41.2",
@@ -51,7 +45,9 @@
     "overrides": {
       "axios": ">=1.12.0",
       "js-yaml": ">=4.1.1",
-      "undici": ">=5.29.0"
+      "undici": ">=5.29.0",
+      "@morpho-org/blue-sdk": "workspace:@gfxlabs/morpho-blue-sdk@*",
+      "@morpho-org/liquidation-sdk-viem": "workspace:@gfxlabs/morpho-liquidation-sdk-viem@*"
     }
   },
   "lint-staged": {
