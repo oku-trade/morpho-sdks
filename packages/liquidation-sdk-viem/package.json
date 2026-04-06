@@ -1,14 +1,13 @@
 {
-  "name": "@morpho-org/liquidation-sdk-viem",
+  "name": "@gfxlabs/morpho-liquidation-sdk-viem",
   "description": "Viem-based package that provides utilities to build viem-based liquidation bots on Morpho and examples using Flashbots and Morpho's GraphQL API.",
-  "version": "2.0.0",
+  "version": "2.21.0-1",
   "author": "Morpho Association <contact@morpho.org>",
   "contributors": ["Rubilmax <rmilon@gmail.com>"],
-  "repository": "github:morpho-org/sdks",
-  "homepage": "https://github.com/morpho-org/sdks",
+  "repository": "github:oku-trade/morpho-sdks",
+  "homepage": "https://github.com/oku-trade/morpho-sdks",
   "bugs": {
-    "url": "https://github.com/morpho-org/sdks/issues",
-    "email": "contact@morpho.org"
+    "url": "https://github.com/oku-trade/morpho-sdks/issues"
   },
   "main": "src/index.ts",
   "files": ["lib", "examples"],

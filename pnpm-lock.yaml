@@ -8,14 +8,13 @@ overrides:
   axios: '>=1.12.0'
   js-yaml: '>=4.1.1'
   undici: '>=5.29.0'
+  '@morpho-org/blue-sdk': workspace:@gfxlabs/morpho-blue-sdk@*
+  '@morpho-org/liquidation-sdk-viem': workspace:@gfxlabs/morpho-liquidation-sdk-viem@*
 
 importers:
 
   .:
     devDependencies:
-      '@actions/core':
-        specifier: ^1.11.1
-        version: 1.11.1
       '@biomejs/biome':
         specifier: ^1.9.4
         version: 1.9.4
@@ -25,9 +24,6 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^20.2.0
         version: 20.2.0
-      '@conventional-changelog/git-client':
-        specifier: ^2.0.0
-        version: 2.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)
       '@types/node':
         specifier: ^24.10.2
         version: 24.10.2
@@ -37,15 +33,6 @@ importers:
       '@vitest/ui':
         specifier: ^4.0.15
         version: 4.0.15(vitest@4.0.15)
-      conventional-changelog-conventionalcommits:
-        specifier: ^8.0.0
-        version: 8.0.0
-      conventional-changelog-writer:
-        specifier: ^8.0.1
-        version: 8.0.1
-      conventional-recommended-bump:
-        specifier: ^11.0.0
-        version: 11.0.0
       dotenv-cli:
         specifier: ^8.0.0
         version: 8.0.0
@@ -58,9 +45,6 @@ importers:
       lint-staged:
         specifier: ^15.4.3
         version: 15.4.3
-      semver:
-        specifier: ^7.7.1
-        version: 7.7.1
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -111,7 +95,7 @@ importers:
   packages/blue-sdk-viem:
     devDependencies:
       '@morpho-org/blue-sdk':
-        specifier: workspace:^
+        specifier: workspace:@gfxlabs/morpho-blue-sdk@*
         version: link:../blue-sdk
       '@morpho-org/morpho-test':
         specifier: workspace:^
@@ -138,7 +122,7 @@ importers:
   packages/blue-sdk-wagmi:
     devDependencies:
       '@morpho-org/blue-sdk':
-        specifier: workspace:^
+        specifier: workspace:@gfxlabs/morpho-blue-sdk@*
         version: link:../blue-sdk
       '@morpho-org/blue-sdk-viem':
         specifier: workspace:^
@@ -195,7 +179,7 @@ importers:
   packages/bundler-sdk-viem:
     devDependencies:
       '@morpho-org/blue-sdk':
-        specifier: workspace:^
+        specifier: workspace:@gfxlabs/morpho-blue-sdk@*
         version: link:../blue-sdk
       '@morpho-org/blue-sdk-viem':
         specifier: workspace:^
@@ -277,13 +261,13 @@ importers:
         specifier: ^4.4.0
         version: 4.4.0(encoding@0.1.13)(graphql@16.10.0)
       '@morpho-org/blue-sdk':
-        specifier: workspace:^
+        specifier: workspace:@gfxlabs/morpho-blue-sdk@*
         version: link:../blue-sdk
       '@morpho-org/blue-sdk-viem':
         specifier: workspace:^
         version: link:../blue-sdk-viem
       '@morpho-org/liquidation-sdk-viem':
-        specifier: workspace:^
+        specifier: workspace:@gfxlabs/morpho-liquidation-sdk-viem@*
         version: 'link:'
       '@morpho-org/morpho-test':
         specifier: workspace:^
@@ -347,7 +331,7 @@ importers:
         specifier: ^4.4.0
         version: 4.4.0(encoding@0.1.13)(graphql@16.10.0)
       '@morpho-org/blue-sdk':
-        specifier: workspace:^
+        specifier: workspace:@gfxlabs/morpho-blue-sdk@*
         version: link:../blue-sdk
       '@morpho-org/blue-sdk-viem':
         specifier: workspace:^
@@ -387,7 +371,7 @@ importers:
         version: link:../bundler-sdk-viem
     devDependencies:
       '@morpho-org/blue-sdk':
-        specifier: workspace:^
+        specifier: workspace:@gfxlabs/morpho-blue-sdk@*
         version: link:../blue-sdk
       '@morpho-org/blue-sdk-viem':
         specifier: workspace:^
@@ -429,7 +413,7 @@ importers:
   packages/morpho-test:
     devDependencies:
       '@morpho-org/blue-sdk':
-        specifier: workspace:^
+        specifier: workspace:@gfxlabs/morpho-blue-sdk@*
         version: link:../blue-sdk
       '@morpho-org/morpho-ts':
         specifier: workspace:^
@@ -460,7 +444,7 @@ importers:
         version: 1.1.0
     devDependencies:
       '@morpho-org/blue-sdk':
-        specifier: workspace:^
+        specifier: workspace:@gfxlabs/morpho-blue-sdk@*
         version: link:../blue-sdk
       '@morpho-org/morpho-test':
         specifier: workspace:^
@@ -490,7 +474,7 @@ importers:
   packages/simulation-sdk-wagmi:
     devDependencies:
       '@morpho-org/blue-sdk':
-        specifier: workspace:^
+        specifier: workspace:@gfxlabs/morpho-blue-sdk@*
         version: link:../blue-sdk
       '@morpho-org/blue-sdk-viem':
         specifier: workspace:^
@@ -630,18 +614,6 @@ importers:
         version: 3.1.0(@safe-global/safe-apps-sdk@9.1.0(bufferutil@4.0.8)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76))(@tanstack/query-core@5.62.16)(@tanstack/react-query@5.62.11(react@19.0.0))(@types/react@19.0.7)(react@19.0.0)(typescript@5.9.3)(viem@2.41.2(bufferutil@4.0.8)(typescript@5.9.3)(utf-8-validate@5.0.10)(zod@3.25.76))
 
 packages:
-
-  '@actions/core@1.11.1':
-    resolution: {integrity: sha512-hXJCSrkwfA46Vd9Z3q4cpEpHB1rL5NG04+/rbqW9d3+CSvtB1tYe8UTpAlixa1vj0m/ULglfEK2UKxMGxCxv5A==}
-
-  '@actions/exec@1.1.1':
-    resolution: {integrity: sha512-+sCcHHbVdk93a0XT19ECtO/gIXoxvdsgQLzb2fE2/5sIZmWQuluYyjPQtrtTHdU1YzTZ7bAPN4sITq2xi1679w==}
-
-  '@actions/http-client@2.2.3':
-    resolution: {integrity: sha512-mx8hyJi/hjFvbPokCg4uRd4ZX78t+YyRPtnKWwIl+RzNaVuFpQHfmlGVfsKEJN8LwTCvL+DfVgAM04XaHkm6bA==}
-
-  '@actions/io@1.1.3':
-    resolution: {integrity: sha512-wi9JjgKLYS7U/z8PPbco+PvTb/nRWjeoFlJ1Qer83k/3C5PHQi28hiVdeE2kHXmIL99mQFawx8qt/JPjZilJ8Q==}
 
   '@adraffy/ens-normalize@1.10.1':
     resolution: {integrity: sha512-96Z2IP3mYmF1Xg2cDm8f1gWGf/HUVedQ3FMifV4kG/PQ4yEP51xDtRAEfhVNt5f/uzpNkZHwWQuUcu6D6K+Ekw==}
@@ -1138,18 +1110,6 @@ packages:
   '@commitlint/types@20.2.0':
     resolution: {integrity: sha512-KTy0OqRDLR5y/zZMnizyx09z/rPlPC/zKhYgH8o/q6PuAjoQAKlRfY4zzv0M64yybQ//6//4H1n14pxaLZfUnA==}
     engines: {node: '>=v18'}
-
-  '@conventional-changelog/git-client@2.0.0':
-    resolution: {integrity: sha512-6lD/xsDwx5xQ1dLgL1Ud47MHatuJpwVXbyHWZhlIUqRRTWTp1jRpwdk1roEaf752WA6LAbZY7elVkRQPHofUHA==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      conventional-commits-filter: ^5.0.0
-      conventional-commits-parser: ^6.1.0
-    peerDependenciesMeta:
-      conventional-commits-filter:
-        optional: true
-      conventional-commits-parser:
-        optional: true
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -2927,36 +2887,9 @@ packages:
     resolution: {integrity: sha512-NKXYmMR/Hr1DevQegFB4MwfM5Vv0m4UIxKZTTYuD98lpTknaZlSRrDOG4X7wIXpGkfsYxZTghUN+Qq+T0YQI7w==}
     engines: {node: '>=16'}
 
-  conventional-changelog-conventionalcommits@8.0.0:
-    resolution: {integrity: sha512-eOvlTO6OcySPyyyk8pKz2dP4jjElYunj9hn9/s0OB+gapTO8zwS9UQWrZ1pmF2hFs3vw1xhonOLGcGjy/zgsuA==}
-    engines: {node: '>=18'}
-
-  conventional-changelog-preset-loader@5.0.0:
-    resolution: {integrity: sha512-SetDSntXLk8Jh1NOAl1Gu5uLiCNSYenB5tm0YVeZKePRIgDW9lQImromTwLa3c/Gae298tsgOM+/CYT9XAl0NA==}
-    engines: {node: '>=18'}
-
-  conventional-changelog-writer@8.0.1:
-    resolution: {integrity: sha512-hlqcy3xHred2gyYg/zXSMXraY2mjAYYo0msUCpK+BGyaVJMFCKWVXPIHiaacGO2GGp13kvHWXFhYmxT4QQqW3Q==}
-    engines: {node: '>=18'}
-    hasBin: true
-
-  conventional-commits-filter@5.0.0:
-    resolution: {integrity: sha512-tQMagCOC59EVgNZcC5zl7XqO30Wki9i9J3acbUvkaosCT6JX3EeFwJD7Qqp4MCikRnzS18WXV3BLIQ66ytu6+Q==}
-    engines: {node: '>=18'}
-
   conventional-commits-parser@5.0.0:
     resolution: {integrity: sha512-ZPMl0ZJbw74iS9LuX9YIAiW8pfM5p3yh2o/NbXHbkFuZzY5jvdi5jFycEOkmBW5H5I7nA+D6f3UcsCLP2vvSEA==}
     engines: {node: '>=16'}
-    hasBin: true
-
-  conventional-commits-parser@6.1.0:
-    resolution: {integrity: sha512-5nxDo7TwKB5InYBl4ZC//1g9GRwB/F3TXOGR9hgUjMGfvSP4Vu5NkpNro2+1+TIEy1vwxApl5ircECr2ri5JIw==}
-    engines: {node: '>=18'}
-    hasBin: true
-
-  conventional-recommended-bump@11.0.0:
-    resolution: {integrity: sha512-+4JwCwCkPjQ6ii2rCw5CNPCuPs9hSyhzclSrleBc7NEoALTRs1jQcn1tBpr4n1nRdUecX1z6J2cxb+BnfM2WUQ==}
-    engines: {node: '>=18'}
     hasBin: true
 
   convert-source-map@2.0.0:
@@ -3460,11 +3393,6 @@ packages:
     resolution: {integrity: sha512-AjqGKbDGUFRKIRCP9tCKiIGHyriz2oHEbPIbEtcSLSs4YjReZOIPQQWek4+6hjw62H9QShXHyaGivGiYVLeYFQ==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
 
-  handlebars@4.7.8:
-    resolution: {integrity: sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==}
-    engines: {node: '>=0.4.7'}
-    hasBin: true
-
   happy-dom@20.0.11:
     resolution: {integrity: sha512-QsCdAUHAmiDeKeaNojb1OHOPF7NjcWPBR7obdu3NwH2a/oyQaLg5d0aaCy/9My6CdPChYF07dvz5chaXBGaD4g==}
     engines: {node: '>=20.0.0'}
@@ -3874,10 +3802,6 @@ packages:
     resolution: {integrity: sha512-BhXM0Au22RwUneMPwSCnyhTOizdWoIEPU9sp0Aqa1PnDMR5Wv2FGXYDjuzJEIX+Eo2Rb8xuYe5jrnm5QowQFkw==}
     engines: {node: '>=16.10'}
 
-  meow@13.2.0:
-    resolution: {integrity: sha512-pxQJQzB6djGPXh08dacEloMFopsOqGVRKFPYvPOt9XDZ1HasbgDZA74CJGreSU4G3Ak7EFJGoiH2auq+yXISgA==}
-    engines: {node: '>=18'}
-
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
 
@@ -3984,9 +3908,6 @@ packages:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
-
-  neo-async@2.6.2:
-    resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
 
   no-case@3.0.4:
     resolution: {integrity: sha512-fgAN3jGAh+RoxUGZHTSOLJIqUc2wmoBwGR4tbpNAKmmovFoWq0OdRkb0VkldReO2a2iBT/OEulG9XSUc10r3zg==}
@@ -4323,11 +4244,6 @@ packages:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
 
-  semver@7.7.1:
-    resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
-    engines: {node: '>=10'}
-    hasBin: true
-
   semver@7.7.3:
     resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
     engines: {node: '>=10'}
@@ -4585,10 +4501,6 @@ packages:
   tsort@0.0.1:
     resolution: {integrity: sha512-Tyrf5mxF8Ofs1tNoxA13lFeZ2Zrbd6cKbuH3V+MQ5sb6DtBj5FjrXVsRWT8YvNAQTqNoz66dz1WsbigI22aEnw==}
 
-  tunnel@0.0.6:
-    resolution: {integrity: sha512-1h/Lnq9yajKY2PEbBadPXj3VxsDDu844OnaAo52UVmIzIvwwtBPIuNvkjuzBlTWpfJyUbG3ez0KSBibQkj4ojg==}
-    engines: {node: '>=0.6.11 <=0.7.0 || >=0.7.3'}
-
   type-fest@0.20.2:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
     engines: {node: '>=10'}
@@ -4608,11 +4520,6 @@ packages:
 
   ua-parser-js@1.0.39:
     resolution: {integrity: sha512-k24RCVWlEcjkdOxYmVJgeD/0a1TiSpqLg+ZalVGV9lsnr4yqu0w7tX/x2xX6G4zpkgQnRf89lxuZ1wsbjXM8lw==}
-    hasBin: true
-
-  uglify-js@3.19.3:
-    resolution: {integrity: sha512-v3Xu+yuwBXisp6QYTcH4UbH+xYJXqnq2m/LtQVWKWzYc1iehYnLixoQDN9FH6/j9/oybfd6W9Ghwkl8+UMKTKQ==}
-    engines: {node: '>=0.8.0'}
     hasBin: true
 
   unc-path-regex@0.1.2:
@@ -4824,9 +4731,6 @@ packages:
     resolution: {integrity: sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==}
     engines: {node: '>=8'}
 
-  wordwrap@1.0.0:
-    resolution: {integrity: sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==}
-
   workerpool@6.5.1:
     resolution: {integrity: sha512-Fs4dNYcsdpYSAfVxhnl1L5zTksjvOJxtC5hzMNl+1t9B8hTJTdKDyZ5ju7ztgPy+ft9tBFXoOlDNiOT9WUXZlA==}
 
@@ -4962,22 +4866,6 @@ packages:
         optional: true
 
 snapshots:
-
-  '@actions/core@1.11.1':
-    dependencies:
-      '@actions/exec': 1.1.1
-      '@actions/http-client': 2.2.3
-
-  '@actions/exec@1.1.1':
-    dependencies:
-      '@actions/io': 1.1.3
-
-  '@actions/http-client@2.2.3':
-    dependencies:
-      tunnel: 0.0.6
-      undici: 5.29.0
-
-  '@actions/io@1.1.3': {}
 
   '@adraffy/ens-normalize@1.10.1':
     optional: true
@@ -5607,13 +5495,6 @@ snapshots:
     dependencies:
       '@types/conventional-commits-parser': 5.0.0
       chalk: 5.4.1
-
-  '@conventional-changelog/git-client@2.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)':
-    dependencies:
-      semver: 7.7.1
-    optionalDependencies:
-      conventional-commits-filter: 5.0.0
-      conventional-commits-parser: 6.1.0
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -7725,39 +7606,12 @@ snapshots:
     dependencies:
       compare-func: 2.0.0
 
-  conventional-changelog-conventionalcommits@8.0.0:
-    dependencies:
-      compare-func: 2.0.0
-
-  conventional-changelog-preset-loader@5.0.0: {}
-
-  conventional-changelog-writer@8.0.1:
-    dependencies:
-      conventional-commits-filter: 5.0.0
-      handlebars: 4.7.8
-      meow: 13.2.0
-      semver: 7.7.1
-
-  conventional-commits-filter@5.0.0: {}
-
   conventional-commits-parser@5.0.0:
     dependencies:
       JSONStream: 1.3.5
       is-text-path: 2.0.0
       meow: 12.1.1
       split2: 4.2.0
-
-  conventional-commits-parser@6.1.0:
-    dependencies:
-      meow: 13.2.0
-
-  conventional-recommended-bump@11.0.0:
-    dependencies:
-      '@conventional-changelog/git-client': 2.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.1.0)
-      conventional-changelog-preset-loader: 5.0.0
-      conventional-commits-filter: 5.0.0
-      conventional-commits-parser: 6.1.0
-      meow: 13.2.0
 
   convert-source-map@2.0.0: {}
 
@@ -8280,15 +8134,6 @@ snapshots:
 
   graphql@16.10.0: {}
 
-  handlebars@4.7.8:
-    dependencies:
-      minimist: 1.2.8
-      neo-async: 2.6.2
-      source-map: 0.6.1
-      wordwrap: 1.0.0
-    optionalDependencies:
-      uglify-js: 3.19.3
-
   happy-dom@20.0.11:
     dependencies:
       '@types/node': 20.19.26
@@ -8710,8 +8555,6 @@ snapshots:
 
   meow@12.1.1: {}
 
-  meow@13.2.0: {}
-
   merge-stream@2.0.0: {}
 
   merge2@1.4.1: {}
@@ -8809,8 +8652,6 @@ snapshots:
   mute-stream@2.0.0: {}
 
   nanoid@3.3.11: {}
-
-  neo-async@2.6.2: {}
 
   no-case@3.0.4:
     dependencies:
@@ -9133,8 +8974,6 @@ snapshots:
 
   semver@6.3.1: {}
 
-  semver@7.7.1: {}
-
   semver@7.7.3: {}
 
   sentence-case@3.0.4:
@@ -9371,8 +9210,6 @@ snapshots:
 
   tsort@0.0.1: {}
 
-  tunnel@0.0.6: {}
-
   type-fest@0.20.2: {}
 
   type-fest@0.21.3: {}
@@ -9382,9 +9219,6 @@ snapshots:
   typescript@5.9.3: {}
 
   ua-parser-js@1.0.39: {}
-
-  uglify-js@3.19.3:
-    optional: true
 
   unc-path-regex@0.1.2: {}
 
@@ -9573,8 +9407,6 @@ snapshots:
   widest-line@3.1.0:
     dependencies:
       string-width: 4.2.3
-
-  wordwrap@1.0.0: {}
 
   workerpool@6.5.1: {}
 
