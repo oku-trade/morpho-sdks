@@ -4,11 +4,10 @@
   "version": "2.0.0",
   "author": "Morpho Association <contact@morpho.org>",
   "contributors": ["Rubilmax <rmilon@gmail.com>"],
-  "repository": "github:morpho-org/sdks",
-  "homepage": "https://github.com/morpho-org/sdks",
+  "repository": "github:oku-trade/morpho-sdks",
+  "homepage": "https://github.com/oku-trade/morpho-sdks",
   "bugs": {
-    "url": "https://github.com/morpho-org/sdks/issues",
-    "email": "contact@morpho.org"
+    "url": "https://github.com/oku-trade/morpho-sdks/issues"
   },
   "license": "MIT",
   "type": "module",
