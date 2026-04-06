@@ -2,11 +2,11 @@ import {
   DEFAULT_SLIPPAGE_TOLERANCE,
   MathLib,
   getChainAddresses,
-} from "@gfxlabs/blue-sdk";
+} from "@morpho-org/blue-sdk";
 
-import { blueAbi, getAuthorizationTypedData } from "@gfxlabs/blue-sdk-viem";
-import { type Action, ActionBundle } from "@gfxlabs/bundler-sdk-viem";
-import { Time, format } from "@gfxlabs/morpho-ts";
+import { blueAbi, getAuthorizationTypedData } from "@morpho-org/blue-sdk-viem";
+import { type Action, ActionBundle } from "@morpho-org/bundler-sdk-viem";
+import { Time, format } from "@morpho-org/morpho-ts";
 import {
   type Account,
   type Address,

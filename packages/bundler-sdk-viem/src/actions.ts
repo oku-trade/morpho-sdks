@@ -19,8 +19,8 @@ import {
   erc20WrapperTokens,
   getChainAddresses,
   getUnwrappedToken,
-} from "@gfxlabs/blue-sdk";
-import { Time, getValue } from "@gfxlabs/morpho-ts";
+} from "@morpho-org/blue-sdk";
+import { Time, getValue } from "@morpho-org/morpho-ts";
 import {
   APPROVE_ONLY_ONCE_TOKENS,
   MAX_TOKEN_APPROVALS,
@@ -29,7 +29,7 @@ import {
   type SimulationState,
   getCurrent,
   simulateOperation,
-} from "@gfxlabs/simulation-sdk";
+} from "@morpho-org/simulation-sdk";
 
 import {
   blueAbi,
@@ -37,7 +37,7 @@ import {
   getDaiPermitTypedData,
   getPermit2PermitTypedData,
   getPermitTypedData,
-} from "@gfxlabs/blue-sdk-viem";
+} from "@morpho-org/blue-sdk-viem";
 import { signTypedData } from "viem/actions";
 import { ActionBundle, ActionBundleRequirements } from "./ActionBundle.js";
 import { BundlerErrors } from "./errors.js";

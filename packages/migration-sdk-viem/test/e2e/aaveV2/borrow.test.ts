@@ -12,12 +12,12 @@ import {
   type MarketParams,
   MathLib,
   addressesRegistry,
-} from "@gfxlabs/blue-sdk";
+} from "@morpho-org/blue-sdk";
 
-import { blueAbi, fetchAccrualPosition } from "@gfxlabs/blue-sdk-viem";
-import { markets } from "@gfxlabs/morpho-test";
-import { testAccount } from "@gfxlabs/test";
-import type { ViemTestContext } from "@gfxlabs/test/vitest";
+import { blueAbi, fetchAccrualPosition } from "@morpho-org/blue-sdk-viem";
+import { markets } from "@morpho-org/morpho-test";
+import { testAccount } from "@morpho-org/test";
+import type { ViemTestContext } from "@morpho-org/test/vitest";
 import {
   type Address,
   encodeFunctionData,

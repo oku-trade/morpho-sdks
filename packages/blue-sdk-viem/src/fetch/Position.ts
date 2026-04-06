@@ -5,7 +5,7 @@ import {
   PreLiquidationParams,
   PreLiquidationPosition,
   getChainAddresses,
-} from "@gfxlabs/blue-sdk";
+} from "@morpho-org/blue-sdk";
 
 import type { Address, Client } from "viem";
 import { getChainId, readContract } from "viem/actions";

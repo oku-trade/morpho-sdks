@@ -3,7 +3,7 @@ import {
   ChainId,
   type MarketParams,
   MathLib,
-} from "@gfxlabs/blue-sdk";
+} from "@morpho-org/blue-sdk";
 import { ExecutorEncoder } from "executooor-viem";
 import type { Account, Chain, Client, Hex, Transport } from "viem";
 import {

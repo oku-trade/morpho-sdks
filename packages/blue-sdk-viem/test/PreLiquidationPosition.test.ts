@@ -5,9 +5,9 @@ import {
   PreLiquidationParams,
   PreLiquidationPosition,
   getChainAddresses,
-} from "@gfxlabs/blue-sdk";
-import { markets } from "@gfxlabs/morpho-test";
-import { testAccount } from "@gfxlabs/test";
+} from "@morpho-org/blue-sdk";
+import { markets } from "@morpho-org/morpho-test";
+import { testAccount } from "@morpho-org/test";
 import { describe, expect } from "vitest";
 import {
   blueAbi,

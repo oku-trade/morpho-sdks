@@ -1,7 +1,7 @@
-import { Holding } from "@gfxlabs/blue-sdk";
+import { Holding } from "@morpho-org/blue-sdk";
 import { fetchHolding } from "../fetch/index.js";
 
-declare module "@gfxlabs/blue-sdk" {
+declare module "@morpho-org/blue-sdk" {
   namespace Holding {
     let fetch: typeof fetchHolding;
   }

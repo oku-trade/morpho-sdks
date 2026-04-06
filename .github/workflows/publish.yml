@@ -33,7 +33,7 @@ jobs:
 
           - migration-sdk-viem
 
-    name: "@gfxlabs/${{ matrix.package }}"
+    name: "@gfxlabs/morpho-${{ matrix.package }}"
     runs-on: ubuntu-latest
 
     steps:
@@ -65,6 +65,10 @@ jobs:
       # Set version of each package to the most recent so they are referenced correctly in dependencies.
       - run: |
           pnpm -r -c exec 'node ../../scripts/release/version.js'
+        if: steps.release.outputs.version
+
+      # Rewrite @morpho-org -> @gfxlabs in all package.json files for publishing.
+      - run: node scripts/release/rewrite-scope.js
         if: steps.release.outputs.version
 
       - run: pnpm publish --no-git-checks --access public --tag ${{ steps.release.outputs.channel }}

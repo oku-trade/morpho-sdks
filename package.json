@@ -1,5 +1,5 @@
 {
-  "name": "@gfxlabs/sdks",
+  "name": "@morpho-org/sdks",
   "version": "0.0.0",
   "description": "Collection of SDKs to ease interactions with the Morpho protocol and Morpho Vaults",
   "author": "Morpho Association <contact@morpho.org>",

@@ -5,7 +5,7 @@ import {
   MathLib,
   addressesRegistry,
   getChainAddresses,
-} from "@gfxlabs/blue-sdk";
+} from "@morpho-org/blue-sdk";
 
 import {
   getAddress,
@@ -23,16 +23,16 @@ import {
   fetchPosition,
   fetchToken,
   fetchUser,
-} from "@gfxlabs/blue-sdk-viem";
+} from "@morpho-org/blue-sdk-viem";
 import {
   encodeBundle,
   finalizeBundle,
   populateBundle,
-} from "@gfxlabs/bundler-sdk-viem";
-import { markets } from "@gfxlabs/morpho-test";
-import { fromEntries } from "@gfxlabs/morpho-ts";
-import { SimulationState } from "@gfxlabs/simulation-sdk";
-import type { ViemTestContext } from "@gfxlabs/test/vitest";
+} from "@morpho-org/bundler-sdk-viem";
+import { markets } from "@morpho-org/morpho-test";
+import { fromEntries } from "@morpho-org/morpho-ts";
+import { SimulationState } from "@morpho-org/simulation-sdk";
+import type { ViemTestContext } from "@morpho-org/test/vitest";
 import { sendTransaction } from "viem/actions";
 import { type TestAPI, describe, expect } from "vitest";
 import { MigratableBorrowPosition_Blue } from "../../../src/index.js";

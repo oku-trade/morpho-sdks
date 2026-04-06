@@ -32,7 +32,9 @@ export const branch = await git.getCurrentBranch();
 export const channel = branch !== "main" ? branch : "latest";
 
 const shortName = basename(process.cwd());
-export const packageName = `@gfxlabs/${shortName}`;
+
+// Source code uses @morpho-org, but we publish under @gfxlabs/morpho-<name>.
+export const packageName = `@gfxlabs/morpho-${shortName}`;
 
 export const tagParams = {
   prefix: `${packageName}-`,
@@ -69,19 +71,17 @@ const bumper = new Bumper(git)
 
 let { releaseType } = await bumper.bump(whatBump);
 
-/**
- * Fork versioning scheme: <base>-<N>
- *
- * The base version (e.g. "2.0.0") is set manually in package.json when
- * syncing with upstream. The suffix N is auto-incremented on each release.
- *
- * - If we have never published, use the version from package.json as-is.
- * - If the base in package.json differs from what's published, the base
- *   was bumped manually after an upstream sync -- reset to <base>-1.
- * - Otherwise increment the fork suffix: <base>-<N+1>.
- * - Only publish when there are new commits (releaseType != null) OR
- *   when there is no prior fork release at all.
- */
+// Fork versioning scheme: <base>-<N>
+//
+// The base version (e.g. "2.0.0") is set manually in package.json when
+// syncing with upstream. The suffix N is auto-incremented on each release.
+//
+// - If we have never published, use the version from package.json as-is.
+// - If the base in package.json differs from what was published, the base
+//   was bumped manually after an upstream sync -- reset to <base>-1.
+// - Otherwise increment the fork suffix: <base>-<N+1>.
+// - Only publish when there are new commits (releaseType != null) OR
+//   when there is no prior fork release at all.
 
 let version;
 

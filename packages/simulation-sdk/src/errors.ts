@@ -3,9 +3,9 @@ import {
   type ErrorClass,
   type MarketId,
   UnknownDataError,
-} from "@gfxlabs/blue-sdk";
+} from "@morpho-org/blue-sdk";
 
-import { entries } from "@gfxlabs/morpho-ts";
+import { entries } from "@morpho-org/morpho-ts";
 import type { Hex } from "viem";
 import type { Operation, OperationType } from "./operations.js";
 

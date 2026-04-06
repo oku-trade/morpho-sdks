@@ -1,12 +1,17 @@
-import { ChainId, Market, MathLib, addressesRegistry } from "@gfxlabs/blue-sdk";
-import { invalidateAllBlueSdkQueries } from "@gfxlabs/blue-sdk-wagmi";
-import { markets, vaults } from "@gfxlabs/morpho-test";
+import {
+  ChainId,
+  Market,
+  MathLib,
+  addressesRegistry,
+} from "@morpho-org/blue-sdk";
+import { invalidateAllBlueSdkQueries } from "@morpho-org/blue-sdk-wagmi";
+import { markets, vaults } from "@morpho-org/morpho-test";
 import {
   type MinimalBlock,
   SimulationState,
   simulateOperations,
-} from "@gfxlabs/simulation-sdk";
-import { renderHook, waitFor } from "@gfxlabs/test-wagmi";
+} from "@morpho-org/simulation-sdk";
+import { renderHook, waitFor } from "@morpho-org/test-wagmi";
 import { QueryClient } from "@tanstack/react-query";
 import _ from "lodash";
 import { erc20Abi, parseEther, zeroAddress } from "viem";

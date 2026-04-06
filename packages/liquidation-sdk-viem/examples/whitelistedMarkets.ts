@@ -6,8 +6,8 @@ import {
   erc20WrapperTokens,
   getChainAddresses,
   isMarketId,
-} from "@gfxlabs/blue-sdk";
-import { safeGetAddress, safeParseNumber } from "@gfxlabs/blue-sdk-viem";
+} from "@morpho-org/blue-sdk";
+import { safeGetAddress, safeParseNumber } from "@morpho-org/blue-sdk-viem";
 import {
   Flashbots,
   LiquidationEncoder,
@@ -20,7 +20,7 @@ import {
   getPositions,
   getRepayDataPreLiquidation,
   mainnetAddresses,
-} from "@gfxlabs/liquidation-sdk-viem";
+} from "@morpho-org/liquidation-sdk-viem";
 import {
   type Account,
   type Address,

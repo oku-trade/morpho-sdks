@@ -2,7 +2,7 @@ import type {
   Address,
   IPreLiquidationParams,
   MarketId,
-} from "@gfxlabs/blue-sdk";
+} from "@morpho-org/blue-sdk";
 
 export type PreLiquidationResponse = {
   warnings: string[];

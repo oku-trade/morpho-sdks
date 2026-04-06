@@ -7,8 +7,8 @@ import {
   type InputMarketParams,
   type MarketId,
   addressesRegistry,
-} from "@gfxlabs/blue-sdk";
-import { Time, ZERO_ADDRESS, format } from "@gfxlabs/morpho-ts";
+} from "@morpho-org/blue-sdk";
+import { Time, ZERO_ADDRESS, format } from "@morpho-org/morpho-ts";
 import type { BuildTxInput } from "@velora-dex/sdk";
 
 import {
@@ -16,15 +16,15 @@ import {
   fetchAccrualPosition,
   fetchMarket,
   fetchToken,
-} from "@gfxlabs/blue-sdk-viem";
+} from "@morpho-org/blue-sdk-viem";
 import {
   Flashbots,
   LiquidationEncoder,
   curvePools,
   curveStableSwapNGAbi,
   mainnetAddresses,
-} from "@gfxlabs/liquidation-sdk-viem";
-import { type AnvilTestClient, testAccount } from "@gfxlabs/test";
+} from "@morpho-org/liquidation-sdk-viem";
+import { type AnvilTestClient, testAccount } from "@morpho-org/test";
 import {
   encodeFunctionData,
   erc20Abi,

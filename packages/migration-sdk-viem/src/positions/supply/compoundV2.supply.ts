@@ -2,11 +2,11 @@ import {
   type ExchangeRateWrappedToken,
   NATIVE_ADDRESS,
   getChainAddresses,
-} from "@gfxlabs/blue-sdk";
+} from "@morpho-org/blue-sdk";
 
 import { encodeFunctionData, maxUint256 } from "viem";
 
-import { ActionBundle } from "@gfxlabs/bundler-sdk-viem";
+import { ActionBundle } from "@morpho-org/bundler-sdk-viem";
 import { cErc20Abi } from "../../abis/compoundV2.js";
 import { migrationAddresses } from "../../config.js";
 import {

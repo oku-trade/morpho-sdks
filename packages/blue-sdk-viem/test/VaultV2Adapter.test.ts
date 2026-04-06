@@ -7,8 +7,8 @@ import {
   VaultV2MorphoMarketV1AdapterV2,
   VaultV2MorphoVaultV1Adapter,
   addressesRegistry,
-} from "@gfxlabs/blue-sdk";
-import type { AnvilTestClient } from "@gfxlabs/test";
+} from "@morpho-org/blue-sdk";
+import type { AnvilTestClient } from "@morpho-org/test";
 import {
   encodeAbiParameters,
   encodeFunctionData,

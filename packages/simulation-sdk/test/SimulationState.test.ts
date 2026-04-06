@@ -7,8 +7,8 @@ import {
   Position,
   Token,
   Vault,
-} from "@gfxlabs/blue-sdk";
-import { randomAddress } from "@gfxlabs/test";
+} from "@morpho-org/blue-sdk";
+import { randomAddress } from "@morpho-org/test";
 
 import { SimulationState } from "../src/index.js";
 

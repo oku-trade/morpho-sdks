@@ -17,14 +17,14 @@ import {
   ChainId,
   type InputMarketParams,
   getChainAddresses,
-} from "@gfxlabs/blue-sdk";
+} from "@morpho-org/blue-sdk";
 import {
   blueAbi,
   erc2612Abi,
   permit2Abi,
   publicAllocatorAbi,
-} from "@gfxlabs/blue-sdk-viem";
-import type { ParaswapOffsets } from "@gfxlabs/simulation-sdk";
+} from "@morpho-org/blue-sdk-viem";
+import type { ParaswapOffsets } from "@morpho-org/simulation-sdk";
 import {
   type Address,
   type Hex,

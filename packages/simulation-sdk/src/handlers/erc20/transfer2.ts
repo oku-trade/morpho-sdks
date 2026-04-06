@@ -1,4 +1,4 @@
-import { getChainAddresses } from "@gfxlabs/blue-sdk";
+import { getChainAddresses } from "@morpho-org/blue-sdk";
 
 import { Erc20Errors, UnexpectedOperation } from "../../errors.js";
 import type { Erc20Operations } from "../../operations.js";

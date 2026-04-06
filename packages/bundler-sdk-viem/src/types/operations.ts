@@ -14,7 +14,7 @@ import {
   type ParaswapOperationArgs,
   type ParaswapOperationType,
   type WithOperationArgs,
-} from "@gfxlabs/simulation-sdk";
+} from "@morpho-org/simulation-sdk";
 import type { UnionOmit } from "viem";
 
 export const BLUE_BUNDLER_OPERATIONS = [

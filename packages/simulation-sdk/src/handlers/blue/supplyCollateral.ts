@@ -1,4 +1,4 @@
-import { getChainAddresses } from "@gfxlabs/blue-sdk";
+import { getChainAddresses } from "@morpho-org/blue-sdk";
 
 import { maxUint256 } from "viem";
 import { BlueSimulationErrors } from "../../errors.js";

@@ -1,6 +1,10 @@
 import _ from "lodash";
 
-import { ChainId, NATIVE_ADDRESS, addressesRegistry } from "@gfxlabs/blue-sdk";
+import {
+  ChainId,
+  NATIVE_ADDRESS,
+  addressesRegistry,
+} from "@morpho-org/blue-sdk";
 
 import { describe, expect, test } from "vitest";
 import { simulateOperation } from "../../../src/index.js";

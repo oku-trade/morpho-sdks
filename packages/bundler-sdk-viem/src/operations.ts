@@ -11,8 +11,8 @@ import {
   getUnwrappedToken,
   permissionedBackedTokens,
   permissionedWrapperTokens,
-} from "@gfxlabs/blue-sdk";
-import { entries, getLast, getValue, keys } from "@gfxlabs/morpho-ts";
+} from "@morpho-org/blue-sdk";
+import { entries, getLast, getValue, keys } from "@morpho-org/morpho-ts";
 import {
   APPROVE_ONLY_ONCE_TOKENS,
   type Erc20Operations,
@@ -27,7 +27,7 @@ import {
   produceImmutable,
   simulateOperation,
   simulateOperations,
-} from "@gfxlabs/simulation-sdk";
+} from "@morpho-org/simulation-sdk";
 
 import { type UnionOmit, isAddressEqual, maxUint256 } from "viem";
 import { BundlerErrors } from "./errors.js";
