@@ -35,6 +35,7 @@ export enum ChainId {
   EdenMainnet = 714,
   PharosMainnet = 1672,
   GensynMainnet = 685689,
+  XdcMainnet = 50,
 }
 
 export interface ChainMetadata {
@@ -328,6 +329,13 @@ export namespace ChainUtils {
       nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
       explorerUrl: "https://gensyn-mainnet.explorer.alchemy.com",
       identifier: "gensyn",
+    },
+    [ChainId.XdcMainnet]: {
+      name: "XDC",
+      id: ChainId.XdcMainnet,
+      nativeCurrency: { name: "XDC", symbol: "XDC", decimals: 18 },
+      explorerUrl: "https://xdcscan.io",
+      identifier: "xdc",
     },
   } satisfies Record<ChainId, ChainMetadata>;
 }

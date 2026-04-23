@@ -140,6 +140,7 @@ export const midasConfigs: Record<ChainId, Record<Address, MidasConfig>> = {
   [ChainId.EdenMainnet]: {},
   [ChainId.PharosMainnet]: {},
   [ChainId.GensynMainnet]: {},
+  [ChainId.XdcMainnet]: {},
 };
 
 export const preLiquidationFactoryConfigs: Record<
@@ -290,5 +291,9 @@ export const preLiquidationFactoryConfigs: Record<
   [ChainId.GensynMainnet]: {
     address: addressesRegistry[ChainId.GensynMainnet].preLiquidationFactory,
     startBlock: deployments[ChainId.GensynMainnet].preLiquidationFactory,
+  },
+  [ChainId.XdcMainnet]: {
+    address: addressesRegistry[ChainId.XdcMainnet].preLiquidationFactory,
+    startBlock: deployments[ChainId.XdcMainnet].preLiquidationFactory,
   },
 };

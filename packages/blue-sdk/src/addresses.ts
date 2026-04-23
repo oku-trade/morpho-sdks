@@ -764,6 +764,22 @@ const _addressesRegistry = {
     preLiquidationFactory: "0x57C88ACAbd4Fa19257104ECCF64ccA34e5eB8961",
     wNative: "0x4200000000000000000000000000000000000006",
   },
+  [ChainId.XdcMainnet]: {
+    morpho: "0xEa49B0fE898aF913A3826F9f462eE2cDcb854fD9",
+    permit2: "0xB952578f3520EE8Ea45b7914994dcf4702cEe578",
+    bundler3: {
+      bundler3: "0xed9bdc3E6081db528b6D5CDDf47EcB05337c62A7",
+      generalAdapter1: "0xAB2Ab6A8bb1082C5d8400D6206c6A13cE413e0c0",
+    },
+    adaptiveCurveIrm: "0x15c7312B0f26aa0AA70B24a0D2AF87B9e7D614A0",
+    vaultV2Factory: "0x227544d6989cD15c05AAB6dde4F29523dcfdbe2B",
+    morphoMarketV1AdapterV2Factory:
+      "0x5C00c99F2235439725417E9f037B7D38FfF35d31",
+    registryList: "0x79A8C4e9E502C1867cAf2E7202f0C6b89aaCd5c1",
+    chainlinkOracleFactory: "0x6Ad93a3aA829514473D3DF67382894A76c7283B4",
+    preLiquidationFactory: "0xe3845262d726a827817C7196143CDa9a4404218d",
+    wNative: "0x951857744785E80e2De051c32EE7b25f9c458C42",
+  },
 } as const;
 
 export type ChainDeployments<Addresses = ChainAddresses> = {
@@ -1321,6 +1337,21 @@ const _deployments = {
     preLiquidationFactory: 7520548n,
     wNative: 0n,
   },
+  [ChainId.XdcMainnet]: {
+    morpho: 101757515n,
+    permit2: 97468020n,
+    bundler3: {
+      bundler3: 101757515n,
+      generalAdapter1: 101757515n,
+    },
+    adaptiveCurveIrm: 101757515n,
+    vaultV2Factory: 101757669n,
+    morphoMarketV1AdapterV2Factory: 101757823n,
+    registryList: 101757823n,
+    chainlinkOracleFactory: 101757578n,
+    preLiquidationFactory: 101757578n,
+    wNative: 0n,
+  },
 } as const satisfies Record<ChainId, ChainDeployments>;
 
 export type AddressLabel = DottedKeys<(typeof _addressesRegistry)[ChainId]>;
@@ -1456,6 +1487,9 @@ const _unwrappedTokensMapping: Record<number, Record<Address, Address>> = {
   },
   [ChainId.GensynMainnet]: {
     [_addressesRegistry[ChainId.GensynMainnet].wNative]: NATIVE_ADDRESS,
+  },
+  [ChainId.XdcMainnet]: {
+    [_addressesRegistry[ChainId.XdcMainnet].wNative]: NATIVE_ADDRESS,
   },
 };
 
