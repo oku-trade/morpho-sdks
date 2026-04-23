@@ -32,8 +32,9 @@ export enum ChainId {
   BscMainnet = 56,
   SoneiumMainnet = 1868,
   TempoMainnet = 4217,
-  GensynMainnet = 685689,
+  EdenMainnet = 714,
   PharosMainnet = 1672,
+  GensynMainnet = 685689,
 }
 
 export interface ChainMetadata {
@@ -307,19 +308,26 @@ export namespace ChainUtils {
       identifier: "tempo",
       hasReliableNativeBalance: false,
     },
+    [ChainId.EdenMainnet]: {
+      name: "Eden",
+      id: ChainId.EdenMainnet,
+      nativeCurrency: { name: "TIA", symbol: "TIA", decimals: 18 },
+      explorerUrl: "https://eden.blockscout.com",
+      identifier: "eden",
+    },
+    [ChainId.PharosMainnet]: {
+      name: "Pharos",
+      id: ChainId.PharosMainnet,
+      nativeCurrency: { name: "PharosCoin", symbol: "PROS", decimals: 18 },
+      explorerUrl: "https://pharosscan.xyz",
+      identifier: "pharos",
+    },
     [ChainId.GensynMainnet]: {
       name: "Gensyn",
       id: ChainId.GensynMainnet,
       nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
       explorerUrl: "https://gensyn-mainnet.explorer.alchemy.com",
       identifier: "gensyn",
-    },
-    [ChainId.PharosMainnet]: {
-      name: "Pharos",
-      id: ChainId.PharosMainnet,
-      nativeCurrency: { name: "Pharos", symbol: "PROS", decimals: 18 },
-      explorerUrl: "https://pharos.socialscan.io",
-      identifier: "pharos",
     },
   } satisfies Record<ChainId, ChainMetadata>;
 }
