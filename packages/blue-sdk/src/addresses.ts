@@ -766,7 +766,7 @@ const _addressesRegistry = {
   },
   [ChainId.XdcMainnet]: {
     morpho: "0xEa49B0fE898aF913A3826F9f462eE2cDcb854fD9",
-    permit2: "0xB952578f3520EE8Ea45b7914994dcf4702cEe578",
+    permit2: "0x000000000022D473030F116dDEE9F6B43aC78BA3",
     bundler3: {
       bundler3: "0xed9bdc3E6081db528b6D5CDDf47EcB05337c62A7",
       generalAdapter1: "0xAB2Ab6A8bb1082C5d8400D6206c6A13cE413e0c0",
